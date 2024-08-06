@@ -1,0 +1,795 @@
+/* Variabel global */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --background-color: #f0f0f0;
+    --text-color: #333;
+}
+
+/* Gaya umum */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    background-image: url('https://i.pinimg.com/736x/c0/7b/08/c07b08d1342169d468a230ea21c2ee37.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Gaya untuk header dan navigasi */
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+}
+
+nav ul li {
+    padding: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+/* Gaya untuk Menu Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #2980b9;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Gaya untuk ikon pada menu dropdown */
+.dropdown-content a::before {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.dropdown-content a[href="#paket-pemula"]::before { content: "🚀"; }
+.dropdown-content a[href="#paket-pro"]::before { content: "💻"; }
+.dropdown-content a[href="#paket-sultan"]::before { content: "👑"; }
+.dropdown-content a[href="#paket-whatsapp"]::before { content: "📱"; }
+.dropdown-content a[href="#paket-logo"]::before { content: "🎨"; }
+
+/* Gaya untuk konten utama */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+/* Gaya untuk halaman Home */
+.new-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.new-page h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.new-page-content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.new-page-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+/* Gaya untuk Pesan (Kupon) */
+.coupon {
+    background-color: #f8f8f8;
+    border: 2px dashed #3498db;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.coupon::after {
+    content: 'KUPON';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.coupon-code {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 10px 0;
+}
+
+.coupon-description {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+/* Gaya untuk footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer a {
+    color: #3498db;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        width: 100%;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .video-container {
+        max-width: 100%;
+    }
+}
+
+/* Tambahan */
+html {
+    scroll-behavior: smooth;
+}
+
+#profit-proof {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.profit-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.profit-images img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya untuk Video Tutorial */
+#video-tutorial {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #f5f5f5;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Rasio aspek 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#video-tutorial p {
+    margin-top: 1rem;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Gaya untuk halaman detail paket */
+.paket-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.paket-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.harga {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.fitur-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.fitur-list li {
+    margin-bottom: 0.5rem;
+}
+
+.deskripsi-paket, .keunggulan-paket {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.keunggulan-paket ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+}
+
+/* Efek hover pada gambar */
+.image-hover {
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-hover:hover {
+    transform: scale(1.05);
+}
+
+/* Tombol dengan efek gradien */
+.gradient-button {
+    display: inline-block;
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+}
+
+.gradient-button:hover {
+    background: linear-gradient(45deg, #2980b9, #3498db);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Animasi loading */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Kartu dengan efek bayangan */
+.card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Efek parallax sederhana */
+.parallax {
+    background-image: url('path/to/your/image.jpg');
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Gaya untuk form pemesanan */
+.paket-item form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.paket-item label {
+    margin-top: 5px;
+}
+
+.paket-item input {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.paket-item button {
+    margin-top: 10px;
+}
+
+/* Pemberitahuan No Refund */
+.no-refund-notice {
+    background-color: #ffcc00;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+header .no-refund-notice {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+footer .no-refund-notice {
+    background-color: transparent;
+    color: #ffcc00;
+}
+
+/* Gaya untuk metode pembayaran */
+.metode-pembayaran, .kontak-penjual {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.metode-pembayaran h2, .kontak-penjual h3 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.metode-pembayaran ul, .kontak-penjual p {
+    list-style-type: none;
+    padding: 0;
+}
+
+.metode-pembayaran li, .kontak-penjual p {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.metode-pembayaran li::before, .kontak-penjual p::before {
+    content: attr(data-emoji);
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.qris-code {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.kontak-penjual a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.kontak-penjual a:hover {
+    text-decoration: underline;
+}
+
+/* Gaya untuk welcome section */
+.welcome-section {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+}
+
+.welcome-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Gaya untuk kode promo */
+.kode-promo {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.kode-promo form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.kode-promo label {
+    font-weight: bold;
+}
+
+.promo-input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.kode-promo input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#promo-message {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Gaya untuk deskripsi layanan */
+.deskripsi-layanan {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.deskripsi-layanan h2 {
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.deskripsi-layanan ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.deskripsi-layanan li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.deskripsi-layanan strong {
+    color: #2c3e50;
+}
+
+/* Gaya untuk paket */
+.paket-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.fitur-list li {
+    margin-bottom: 5px;
+}
+
+.gradient-button {
+    font-size: 1em;
+}
+
+/* Gaya untuk pemutar musik */
+#music-player {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.music-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.music-button:hover {
+    background-color: #2980b9;
+}
+
+/* Gaya untuk top up Mobile Legends */
+.topup-section {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.topup-section h2 {
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+#topup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#topup-form label {
+    font-weight: bold;
+}
+
+#topup-form input,
+#topup-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.topup-note {
+    margin-top: 20px;
+    font-style: italic;
+    color: #666;
+}
+
+@keyframes buttonPress {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+.button-pressed {
+    animation: buttonPress 0.3s ease-in-out;
+}
+
+/* Gaya tambahan untuk tombol */
+.paket-item button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.paket-item button:hover {
+    background-color: #45a049;
+}
+
+@keyframes highlightPulse {
+    0% { background-color: #f9f9f9; }
+    50% { background-color: #ffe6e6; }
+    100% { background-color: #f9f9f9; }
+}
+
+.kontak-penjual.highlight {
+    animation: highlightPulse 1s ease-in-out 3;
+}
+
+.paket-emoji {
+    font-size: 64px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.paket-item {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.paket-item:hover {
+    transform: translateY(-5px);
+}
+
+.paket-item h2 {
+    text-align: center;
+    color: #333;
+}
+
+.harga {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    color: #4CAF50;
+}
+
+.fitur-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.fitur-list li {
+    margin-bottom: 10px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Gaya untuk halaman Tentang Kami */
+.tentang-kami main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.tentang-kami h1, .tentang-kami h2 {
+    color: #3498db;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.tentang-kami p {
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.tentang-kami .fitur ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tentang-kami .fitur li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.tentang-kami .visi-misi p {
+    background-color: #e8f4f8;
+    border-left: 5px solid #3498db;
+    padding: 15px;
+    margin: 10px 0;
+}

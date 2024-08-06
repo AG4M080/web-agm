@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paket Hosting Minecraft - HORS STORE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="tentang-kami.html">Tentang Kami</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Paket Hosting</a>
+                    <div class="dropdown-content">
+                        <a href="#paket-pemula">Paket Pemula</a>
+                        <a href="#paket-pro">Paket Pro</a>
+                        <a href="#paket-sultan">Paket Sultan</a>
+                        <a href="#paket-whatsapp">Paket Panel Bot WhatsApp</a>
+                        <a href="#paket-logo">Paket Logo Server & Map Backup</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="paket-list">
+            <h1>Paket Hosting Minecraft</h1>
+            
+            <div id="paket-pemula" class="paket-item">
+                <h2>Paket Pemula 🚀</h2>
+                <div class="paket-emoji">🌟</div>
+                <p class="harga">Rp 50.000/bulan</p>
+                <ul class="fitur-list">
+                    <li>💾 1 GB RAM</li>
+                    <li>👥 10 Slot Pemain</li>
+                    <li>🛠️ Dukungan 24/7</li>
+                </ul>
+                <p>Stok: <span id="stok-pemula">10</span></p>
+                <button onclick="pesanPaket('pemula')">Pesan Sekarang 🛒</button>
+            </div>
+
+            <div id="paket-pro" class="paket-item">
+                <h2>Paket Pro 💻</h2>
+                <div class="paket-emoji">💎</div>
+                <p class="harga">Rp 100.000/bulan</p>
+                <ul class="fitur-list">
+                    <li>💾 4 GB RAM</li>
+                    <li>👥 30 Slot Pemain</li>
+                    <li>🛠️ Dukungan 24/7</li>
+                    <li>📁 Backup Otomatis</li>
+                </ul>
+                <p>Stok: <span id="stok-pro">5</span></p>
+                <button onclick="pesanPaket('pro')">Pesan Sekarang 🛒</button>
+            </div>
+
+            <div id="paket-sultan" class="paket-item">
+                <h2>Paket Sultan 👑</h2>
+                <div class="paket-emoji">🏆</div>
+                <p class="harga">Rp 200.000/bulan</p>
+                <ul class="fitur-list">
+                    <li>💾 8 GB RAM</li>
+                    <li>👥 Slot Pemain Tak Terbatas</li>
+                    <li>🛠️ Dukungan Prioritas 24/7</li>
+                    <li>📁 Backup Otomatis</li>
+                    <li>📚 Domain Kustom</li>
+                </ul>
+                <p>Stok: <span id="stok-sultan">3</span></p>
+                <button onclick="pesanPaket('sultan')">Pesan Sekarang 🛒</button>
+            </div>
+
+            <div id="paket-whatsapp" class="paket-item">
+                <h2>Paket Panel Bot WhatsApp 📱</h2>
+                <div class="paket-emoji">📱</div>
+                <p class="harga">Rp 75.000/bulan</p>
+                <ul class="fitur-list">
+                    <li>💾 2 GB RAM</li>
+                    <li>📱 Panel Bot WhatsApp</li>
+                    <li>🛠️ Dukungan 24/7</li>
+                </ul>
+                <p>Stok: <span id="stok-whatsapp">8</span></p>
+                <button onclick="pesanPaket('whatsapp')">Pesan Sekarang 🛒</button>
+            </div>
+
+            <div id="paket-logo" class="paket-item">
+                <h2>Paket Logo Server & Map Backup 🎨</h2>
+                <div class="paket-emoji">🎨</div>
+                <p class="harga">Rp 25.000 (sekali bayar)</p>
+                <ul class="fitur-list">
+                    <li>🎨 Desain Logo Kustom</li>
+                    <li>📁 Backup Map Server</li>
+                    <li>🔄 Revisi 2x</li>
+                </ul>
+                <p>Stok: <span id="stok-logo">15</span></p>
+                <button onclick="pesanPaket('logo')">Pesan Sekarang 🛒</button>
+            </div>
+        </section>
+    </main>
+
+    <div class="metode-pembayaran">
+        <h2>Metode Pembayaran 💳</h2>
+        <ul>
+            <li data-emoji="💰">GoPay: 085743734080</li>
+            <li data-emoji="💸">DANA: 085743734080</li>
+            <li data-emoji="📱">QRIS: Scan kode di bawah</li>
+        </ul>
+        <img src="https://help.kasirpintar.co.id/wp-content/uploads/2021/03/6.-pajang-dan-print-qris-toko-new.png" alt="QRIS" class="qris-code" />
+        <p><strong>NOTE:</strong> Setelah melakukan pembayaran, harap kirimkan bukti pembayaran Anda ke kontak penjual di bawah ini:</p>
+    </div>
+
+    <footer>
+        <div id="kontak" class="kontak-penjual">
+            <h3>Hubungi Penjual:</h3>
+            <p>📱 WhatsApp: <a href="https://wa.me/6285743734080">+62 857-4373-4080</a></p>
+            <p>📧 Email: <a href="mailto:afgansyakuro080@gmail.com">afgansyakuro080@gmail.com</a></p>
+            <p>✈️ Telegram: <a href="https://t.me/hostingminecraft">@hostingminecraft</a></p>
+        </div>
+        <p>&copy; 2023 HORS STORE. Hak cipta dilindungi.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
